@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 const Header = () => {
   return (
     <Container>
-      <nav className="h-20 flex flex-col md:flex-row items-center justify-between">
+      <nav className="h-20 flex flex-col md:flex-row items-center justify-between shadow-sha-bottom">
         <NavLink to="/" className="flex justify-center items-center">
           <img className="size-14" src={logo} alt="" />
           <h1 className="text-primary font-medium text-2xl">

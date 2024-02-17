@@ -1,0 +1,218 @@
+[
+    {
+        "image": "https://t.ly/Y4L6f",
+        "title": "Rice",
+        "category": "Food",
+        "quantity": "50 bags",
+        "description": "High-quality long-grain rice suitable for diverse culinary applications. Sourced from local farmers to support sustainable agriculture.",
+        "nutritional_info": {
+            "calories": 200,
+            "protein": "4g",
+            "fat": "0g",
+            "carbohydrates": "45g",
+            "fiber": "2g"
+        },
+        "expiration_date": "2025-12-31",
+        "manufacturer": "Local Rice Co-op",
+        "origin": "Local",
+        "price_per_unit": "$20 per bag"
+    },
+    {
+        "image": "https://t.ly/OO4-k",
+        "title": "Pasta",
+        "category": "Food",
+        "quantity": "100 boxes",
+        "description": "High-quality long-grain rice suitable for diverse culinary applications. Sourced from local farmers to support sustainable agriculture.",
+        "nutritional_info": {
+            "calories": 200,
+            "protein": "4g",
+            "fat": "0g",
+            "carbohydrates": "45g",
+            "fiber": "2g"
+        },
+        "expiration_date": "2025-12-31",
+        "manufacturer": "Local Rice Co-op",
+        "origin": "Local",
+        "price_per_unit": "$20 per bag"
+    },
+    {
+        "image": "https://t.ly/JCgCx",
+        "title": "Canned Vegetables",
+        "category": "Food",
+        "quantity": "300 cans",
+        "description": "High-quality long-grain rice suitable for diverse culinary applications. Sourced from local farmers to support sustainable agriculture.",
+        "nutritional_info": {
+            "calories": 200,
+            "protein": "4g",
+            "fat": "0g",
+            "carbohydrates": "45g",
+            "fiber": "2g"
+        },
+        "expiration_date": "2025-12-31",
+        "manufacturer": "Local Rice Co-op",
+        "origin": "Local",
+        "price_per_unit": "$20 per bag"
+    },
+    {
+        "image": "https://t.ly/sQGFR",
+        "title": "Bread",
+        "category": "Food",
+        "quantity": "200 loaves",
+        "description": "High-quality long-grain rice suitable for diverse culinary applications. Sourced from local farmers to support sustainable agriculture.",
+        "nutritional_info": {
+            "calories": 200,
+            "protein": "4g",
+            "fat": "0g",
+            "carbohydrates": "45g",
+            "fiber": "2g"
+        },
+        "expiration_date": "2025-12-31",
+        "manufacturer": "Local Rice Co-op",
+        "origin": "Local",
+        "price_per_unit": "$20 per bag"
+    },
+    {
+        "image": "https://t.ly/5et5A",
+        "title": "Breakfast Cereal",
+        "category": "Food",
+        "quantity": "150 boxes",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://t.ly/cLnJx",
+        "title": "Milk",
+        "category": "Food",
+        "quantity": "100 liters",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://rb.gy/e94nkz",
+        "title": "Canned Soup",
+        "category": "Food",
+        "quantity": "400 cans",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://rb.gy/5m6zpo",
+        "title": "Fresh Fruit",
+        "category": "Food",
+        "quantity": "500 pieces",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://rb.gy/78nu2c",
+        "title": "Fresh Vegetables",
+        "category": "Food",
+        "quantity": "300 kg",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://rb.gy/ofw3ta",
+        "title": "Fruit Juice",
+        "category": "Food",
+        "quantity": "200 bottles",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://rb.gy/dvpsuz",
+        "title": "Bottled Water",
+        "category": "Food",
+        "quantity": "100 cases",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    },
+    {
+        "image": "https://t.ly/Wnqhv",
+        "title": "Canned Beans",
+        "category": "Food",
+        "quantity": "500 cans",
+        "description": "Assorted canned beans including black beans, kidney beans, and chickpeas. Rich in protein and fiber, ideal for quick and nutritious meals.",
+        "nutritional_info": {
+            "calories": 150,
+            "protein": "7g",
+            "fat": "1g",
+            "carbohydrates": "25g",
+            "fiber": "6g"
+        },
+        "expiration_date": "2024-10-31",
+        "manufacturer": "BeanCo",
+        "origin": "Imported",
+        "price_per_unit": "$1 per can"
+    }
+]

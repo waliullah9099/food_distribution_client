@@ -6,7 +6,7 @@ import logo from "../../assets/Images/logo.png";
 const Footer = () => {
   const year = moment().year();
   return (
-    <footer className="bg-secondary-foreground text-light-gray">
+    <footer className="setBgImage bg-secondary-foreground text-light-gray">
       <Container>
         <div className="flex flex-col md:flex-row justify-between gap-4 py-8">
           <div>
