@@ -4,12 +4,11 @@ import { NavLink } from "react-router-dom";
 const PostCard = ({ item }) => {
   return (
     <div
-      className="shadow-md border rounded-md flex flex-col justify-center items-start space-y-4 p-4"
+      className="shadow-md border group rounded-md flex flex-col justify-center items-start space-y-4 p-4"
       key={item._id}
-      data-aos="zoom-in-up"
     >
       <img
-        className="rounded-sm border shadow-sm p-1 hover:scale-90 transition-transform duration-300 transform origin-center"
+        className="rounded-sm border shadow-sm p-1 group-hover:scale-90 transition-transform duration-300 transform origin-center"
         src={item.image}
       />
 

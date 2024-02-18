@@ -21,7 +21,7 @@ const SuppliesPost = () => {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {sliceData?.map((item: TPosts) => (
-          <PostCard item={item} />
+          <PostCard item={item} key={item._id} />
         ))}
       </div>
       <div

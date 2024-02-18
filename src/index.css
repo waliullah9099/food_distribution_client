@@ -76,6 +76,18 @@
   body {
     @apply bg-background text-foreground;
   }
+  .gallaryImage {
+    @apply rounded-sm shadow-md h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125;
+  }
+  .cardHover {
+    @apply relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30;
+  }
+  .absoulateDiv {
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70;
+  }
+  .cardContetWrapper {
+    @apply absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0;
+  }
 }
 
 .setBgImage {
@@ -84,4 +96,40 @@
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.setBgImageHelpHand {
+  background-image: url("./assets/Images/footer-bg.7e5aec06.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* scroll bar progress  */
+#progress {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 45px;
+  right: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  place-items: center;
+  z-index: 9;
+  transition: all 500ms;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 5px);
+  width: calc(100% - 5px);
+  background-color: #141410;
+  border-radius: 50%;
+  display: grid;
+  color: white;
+  place-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+  z-index: 9;
 }

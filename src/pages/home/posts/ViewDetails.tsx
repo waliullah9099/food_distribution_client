@@ -1,18 +1,18 @@
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
+import { Button } from "@/components/ui/button";
+import { TPosts } from "@/types";
 import { useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
-  const data = useLoaderData();
-  const { title, image } = data;
-  console.log(data);
+  const data: TPosts = useLoaderData();
 
   return (
     <Container className="my-16">
       <SectionTitle
         fTitle="All About"
         lTitle="This Supply Post"
-        description="  At Food Distribution and Supplies Management System, our mission is to
+        description=" At Food Distribution and Supplies Management System, our mission is to
           provide timely access to essential resources, promoting food security
           and well-being for all members of our community."
       />
@@ -42,7 +42,8 @@ const ViewDetails = () => {
             Expiration Date:{" "}
             <span className="font-semibold">{data?.expiration_date}</span>
           </h1>
-          <p className="text-lg">{data?.description}</p>
+          <p className="text-lg pb-6">{data?.description}</p>
+          <Button className="text-xl py-6 px-10 ">Donate Now</Button>
         </div>
       </div>
     </Container>
