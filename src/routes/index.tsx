@@ -1,7 +1,11 @@
 import App from "@/App";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 import NotFound from "@/components/shared/404";
 import Login from "@/pages/Login/Login";
 import Regestration from "@/pages/Regestration/Regestration";
+import CreatePost from "@/pages/dashboard/CreatePost";
+import Dashboard from "@/pages/dashboard/Dashboard ";
+import Supplies from "@/pages/dashboard/Supplies";
 import Home from "@/pages/home/Home";
 import AllPost from "@/pages/home/posts/AllPost";
 import ViewDetails from "@/pages/home/posts/ViewDetails";
@@ -27,13 +31,32 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/api/v1/posts/${params.id}`),
       },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/regestration",
+    element: <Regestration />,
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    errorElement: <NotFound />,
+    children: [
       {
-        path: "/login",
-        element: <Login />,
+        path: "",
+        element: <Dashboard />,
       },
       {
-        path: "/regestration",
-        element: <Regestration />,
+        path: "supplies",
+        element: <Supplies />,
+      },
+      {
+        path: "create-supply",
+        element: <CreatePost />,
       },
     ],
   },

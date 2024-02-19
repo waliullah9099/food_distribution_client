@@ -14,9 +14,9 @@ const Header = () => {
           </h1>
         </NavLink>
         <ul className="space-x-5 text-lg font-semibold">
-          <NavLink to="/admin/dashboard">Dashboard</NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/all-supplies">All Supplies</NavLink>
+          <NavLink to="/supplies">All Supplies</NavLink>
           <Button>
             <NavLink to="/contact">Login</NavLink>
           </Button>
