@@ -31,7 +31,7 @@ const Regestration = () => {
     createUser(email, password)
       .then((result) => {
         const loggesUser = result.user;
-        console.log(loggesUser);
+        // console.log(loggesUser);
         toast.success("Create User successfully....");
         updatedUserData(loggesUser, userName);
         navigate(from, { replace: true });
@@ -40,7 +40,7 @@ const Regestration = () => {
   };
 
   const updatedUserData = (user, name) => {
-    console.log("user", user);
+    // console.log("user", user);
 
     updateProfile(user, { displayName: name })
       .then(() => {})

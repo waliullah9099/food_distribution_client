@@ -24,12 +24,14 @@ const Header = () => {
           </h1>
         </NavLink>
         <ul className="space-x-5 text-lg font-semibold">
-          {user && <NavLink to="/dashboard">Dashboard</NavLink>}
           <NavLink to="/supplies">All Supplies</NavLink>
           {user ? (
-            <Button onClick={hadleLogout} className="text-lg">
-              <NavLink to="/">Logout</NavLink>
-            </Button>
+            <>
+              <NavLink to="/dashboard">Dashboard</NavLink>
+              <Button onClick={hadleLogout} className="text-lg">
+                <NavLink to="/">Logout</NavLink>
+              </Button>
+            </>
           ) : (
             <Button className="text-lg">
               <NavLink to="/login">Login</NavLink>

@@ -44,32 +44,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <PrivateRouter>
+        <DashboardLayout />
+      </PrivateRouter>
+    ),
     errorElement: <NotFound />,
     children: [
       {
         path: "",
-        element: (
-          // <PrivateRouter>
-          <Dashboard />
-          // </PrivateRouter>
-        ),
+        element: <Dashboard />,
       },
       {
         path: "supplies",
-        element: (
-          // <PrivateRouter>
-          <Supplies />
-          // </PrivateRouter>
-        ),
+        element: <Supplies />,
       },
       {
         path: "create-supply",
-        element: (
-          // <PrivateRouter>
-          <CreatePost />
-          // </PrivateRouter>
-        ),
+        element: <CreatePost />,
       },
     ],
   },

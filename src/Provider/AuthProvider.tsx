@@ -41,10 +41,7 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
-      const loggedUser = {
-        email: currentUser.email,
-      };
-      console.log(currentUser);
+      // console.log(currentUser);
       //   if (currentUser && currentUser.email) {
       //     fetch("http://localhost:5000/jwt", {
       //       method: "POST",
