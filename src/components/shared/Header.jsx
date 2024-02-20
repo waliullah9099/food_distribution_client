@@ -2,8 +2,18 @@ import { NavLink } from "react-router-dom";
 import Container from "./Container";
 import logo from "../../assets/Images/logo.png";
 import { Button } from "../ui/button";
+import { useContext } from "react";
+import { AuthContext } from "@/Provider/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const hadleLogout = () => {
+    logOut()
+      .then(() => {
+        localStorage.removeItem("car-access-token");
+      })
+      .catch((err) => console.error(err));
+  };
   return (
     <Container>
       <nav className="h-20 flex flex-col md:flex-row items-center justify-between shadow-sha-bottom">
@@ -14,12 +24,17 @@ const Header = () => {
           </h1>
         </NavLink>
         <ul className="space-x-5 text-lg font-semibold">
-          <NavLink to="/dashboard">Dashboard</NavLink>
-          <NavLink to="/">Home</NavLink>
+          {user && <NavLink to="/dashboard">Dashboard</NavLink>}
           <NavLink to="/supplies">All Supplies</NavLink>
-          <Button>
-            <NavLink to="/contact">Login</NavLink>
-          </Button>
+          {user ? (
+            <Button onClick={hadleLogout} className="text-lg">
+              <NavLink to="/">Logout</NavLink>
+            </Button>
+          ) : (
+            <Button className="text-lg">
+              <NavLink to="/login">Login</NavLink>
+            </Button>
+          )}
         </ul>
       </nav>
     </Container>

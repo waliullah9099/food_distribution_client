@@ -1,3 +1,4 @@
+import { AuthContext } from "@/Provider/AuthProvider";
 import Container from "@/components/shared/Container";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,14 +9,41 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const Login = () => {
   const form = useForm();
 
+  const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const onSubmit = (data) => {
-    console.log(data);
+    const email = data.email;
+    const password = data.password;
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("User login successfully....");
+        navigate(from, { replace: true });
+      })
+      .catch((err) => console.error(err));
+
+    // signInWithEmailAndPassword(auth, email, password)
+    //   .then((result) => {
+    //     const loggedUser = result.user;
+    //     console.log(loggedUser);
+    //     toast.success("user login successfully");
+    //   })
+    //   .catch((error) => {
+    //     toast.error(error.message);
+    //   });
   };
   return (
     <Container>
@@ -57,7 +85,7 @@ const Login = () => {
             Have no account?
             <span className="text-sm text-secondary">
               {" "}
-              <NavLink to="/regestration">To create new</NavLink>
+              <NavLink to="/register">To create new</NavLink>
             </span>
           </p>
         </Form>

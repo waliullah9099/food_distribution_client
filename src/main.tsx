@@ -6,12 +6,17 @@ import router from "./routes/index.tsx";
 import { Provider } from "react-redux";
 import { store } from "./redux/feathers/store.ts";
 import ScrollBar from "./components/shared/ScrollBar.tsx";
+import { Toaster } from "sonner";
+import AuthProvider from "./Provider/AuthProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-      <ScrollBar />
-    </Provider>
+    <AuthProvider>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+        <Toaster position="top-right" />
+        <ScrollBar />
+      </Provider>
+    </AuthProvider>
   </React.StrictMode>
 );

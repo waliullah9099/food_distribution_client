@@ -2,7 +2,7 @@ import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { TPosts } from "@/types";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
   const data: TPosts = useLoaderData();
@@ -43,7 +43,9 @@ const ViewDetails = () => {
             <span className="font-semibold">{data?.expiration_date}</span>
           </h1>
           <p className="text-lg pb-6">{data?.description}</p>
-          <Button className="text-xl py-6 px-10 ">Donate Now</Button>
+          <Link to="/dashboard/create-supply">
+            <Button className="text-xl py-6 px-10 ">Donate Now</Button>
+          </Link>
         </div>
       </div>
     </Container>

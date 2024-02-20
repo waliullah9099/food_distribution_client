@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 
 const SuppliesPost = () => {
   const { data } = useGetAllPostQuery(undefined);
-  const sliceData = data?.slice(0, 6);
 
   return (
     <Container className="my-12">
@@ -20,7 +19,7 @@ const SuppliesPost = () => {
         and well-being for all members of our community."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {sliceData?.map((item: TPosts) => (
+        {data?.slice(0, 6).map((item: TPosts) => (
           <PostCard item={item} key={item._id} />
         ))}
       </div>

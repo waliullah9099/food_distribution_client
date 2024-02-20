@@ -14,7 +14,7 @@ import {
 import { useState } from "react";
 import { toast } from "sonner";
 
-const CreatePost = () => {
+const UpdatedPost = () => {
   const [addPost, { isSuccess }] = useCreatePostMutation();
 
   const [category, setCategory] = useState("");
@@ -128,4 +128,4 @@ const CreatePost = () => {
   );
 };
 
-export default CreatePost;
+export default UpdatedPost;

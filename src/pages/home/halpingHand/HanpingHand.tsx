@@ -1,11 +1,24 @@
 import Container from "@/components/shared/Container";
 import CounterScroller from "@/components/shared/CounterScroller";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 const HanpingHand = () => {
+  const componentRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: componentRef,
+    offset: ["0 1", "1.4 1"],
+  });
   return (
-    <div className=" bg-slate-50  h-[80vh]">
-      <Container className="setBgImageHelpHand h-full ">
-        <div className="flex flex-col w-3/4 pt-12 mx-auto items-center justify-center gap-4 ">
+    <motion.div className=" bg-slate-50 h-[80vh]">
+      <Container className="setBgImageHelpHand h-full mt-24">
+        <motion.div
+          style={{
+            scale: scrollYProgress,
+          }}
+          ref={componentRef}
+          className="flex flex-col w-3/4 pt-12 mx-auto items-center justify-center gap-4 "
+        >
           <p className="text-secondary text-xl">Hoope at glance</p>
           <h1 className="text-[#191F28] text-3xl lg:text-5xl font-bold pb-2">
             Have A Helping Hand For Hope.
@@ -14,9 +27,9 @@ const HanpingHand = () => {
             At Food Distribution and Supplies Management System, our mission is
             to provide timely access to essential resources
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex justify-around pt-12">
+        <div className="flex justify-around pt-10">
           <div>
             <div className="text-5xl font-bold flex items-center">
               <h1 className="text-primary">$ </h1>
@@ -33,7 +46,7 @@ const HanpingHand = () => {
               <CounterScroller start={1} end={79} />
               <h1 className="text-secondary">K+</h1>
             </div>
-            <h1 className="text-center text-xl text-secondary  -mt-8">
+            <h1 className="text-center text-xl text-secondary -mt-8">
               Projects funded
             </h1>
           </div>
@@ -59,7 +72,7 @@ const HanpingHand = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 

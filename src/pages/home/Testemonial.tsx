@@ -3,8 +3,11 @@ import "keen-slider/keen-slider.min.css";
 import Container from "@/components/shared/Container";
 import image from "../../assets/Images/Invisible.png";
 import SectionTitle from "@/components/shared/SectionTitle";
+import { motion } from "framer-motion";
+import useScrollGrow from "@/hooks/ScrollGrowHook";
 
 const Testemonial = () => {
+  const { style, componentRef } = useScrollGrow();
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free",
@@ -13,6 +16,7 @@ const Testemonial = () => {
       spacing: 15,
     },
   });
+
   return (
     <Container className="my-16">
       <SectionTitle
@@ -22,12 +26,13 @@ const Testemonial = () => {
           provide timely access to essential resources, promoting food security
           and well-being for all members of our community."
       />
-      <div ref={ref} className="keen-slider">
-        <div className="keen-slider__slide number-slide1">
-          <div
-            data-aos="fade-up"
-            className="p-8 rounded-xl bg-[#FFF9EE] space-y-5 h-[350px]"
-          >
+      <motion.div ref={ref} className="keen-slider">
+        <motion.div
+          style={style}
+          ref={componentRef}
+          className="keen-slider__slide number-slide1"
+        >
+          <div className="p-8 rounded-xl bg-[#FFF9EE] space-y-5 h-[350px]">
             <div className="flex gap-3">
               <img src={image} alt="" />
               <div>
@@ -58,12 +63,13 @@ const Testemonial = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="keen-slider__slide number-slide2">
-          <div
-            data-aos="fade-up"
-            className="p-8 rounded-xl bg-[#E7F5E8] space-y-5 h-[350px]"
-          >
+        </motion.div>
+        <motion.div
+          style={style}
+          ref={componentRef}
+          className="keen-slider__slide number-slide2"
+        >
+          <div className="p-8 rounded-xl bg-[#E7F5E8] space-y-5 h-[350px]">
             <div className="flex gap-3">
               <img src={image} alt="" />
               <div>
@@ -93,12 +99,13 @@ const Testemonial = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="keen-slider__slide number-slide3">
-          <div
-            data-aos="fade-up"
-            className="p-8 rounded-xl bg-[#F5F6F7] space-y-5 h-[350px]"
-          >
+        </motion.div>
+        <motion.div
+          style={style}
+          ref={componentRef}
+          className="keen-slider__slide number-slide3"
+        >
+          <div className="p-8 rounded-xl bg-[#F5F6F7] space-y-5 h-[350px]">
             <div className="flex gap-3">
               <img src={image} alt="" />
               <div>
@@ -129,12 +136,13 @@ const Testemonial = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="keen-slider__slide number-slide4">
-          <div
-            data-aos="fade-up"
-            className="p-8 rounded-xl bg-[#FFF9EE] space-y-5 h-[350px]"
-          >
+        </motion.div>
+        <motion.div
+          style={style}
+          ref={componentRef}
+          className="keen-slider__slide number-slide4"
+        >
+          <div className="p-8 rounded-xl bg-[#FFF9EE] space-y-5 h-[350px]">
             <div className="flex gap-3">
               <img src={image} alt="" />
               <div>
@@ -165,12 +173,13 @@ const Testemonial = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="keen-slider__slide number-slide5">
-          <div
-            data-aos="fade-up"
-            className="p-8 rounded-xl bg-[#E7F5E8] space-y-5 h-[350px]"
-          >
+        </motion.div>
+        <motion.div
+          style={style}
+          ref={componentRef}
+          className="keen-slider__slide number-slide5"
+        >
+          <div className="p-8 rounded-xl bg-[#E7F5E8] space-y-5 h-[350px]">
             <div className="flex gap-3">
               <img src={image} alt="" />
               <div>
@@ -200,12 +209,13 @@ const Testemonial = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="keen-slider__slide number-slide6">
-          <div
-            data-aos="fade-up"
-            className="p-8 rounded-xl bg-[#F5F6F7] space-y-5 h-[350px]"
-          >
+        </motion.div>
+        <motion.div
+          style={style}
+          ref={componentRef}
+          className="keen-slider__slide number-slide6"
+        >
+          <div className="p-8 rounded-xl bg-[#F5F6F7] space-y-5 h-[350px]">
             <div className="flex gap-3">
               <img src={image} alt="" />
               <div>
@@ -236,8 +246,8 @@ const Testemonial = () => {
               </p>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </Container>
   );
 };

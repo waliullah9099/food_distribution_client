@@ -7,13 +7,25 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useGetAllPostQuery } from "@/redux/feathers/posts/postApi";
+import {
+  useGetAllPostQuery,
+  useRemovePostMutation,
+} from "@/redux/feathers/posts/postApi";
 import { TPosts } from "@/types";
 import { Edit, Trash2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Supplies = () => {
-  const posts = useGetAllPostQuery(undefined);
+  const posts = useGetAllPostQuery(undefined, {});
+  const [removePost, { isSuccess }] = useRemovePostMutation();
+  const handleRemove = (id: any) => {
+    removePost(id);
+    if (isSuccess) {
+      toast.success("post is deleted");
+    }
+  };
+
   return (
     <div className="p-4 border-1 shadow-md">
       <div className="my-4 flex justify-end gap-5 mr-12">
@@ -55,7 +67,7 @@ const Supplies = () => {
               </TableCell>
               <TableCell>
                 <Trash2
-                  // onClick={() => handleDelete(post.id)}
+                  onClick={() => handleRemove(post._id)}
                   className="size-8 bg-red-600 text-white p-2 rounded-sm ml-3"
                 />
               </TableCell>

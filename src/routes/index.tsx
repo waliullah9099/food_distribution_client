@@ -10,6 +10,7 @@ import Home from "@/pages/home/Home";
 import AllPost from "@/pages/home/posts/AllPost";
 import ViewDetails from "@/pages/home/posts/ViewDetails";
 import { createBrowserRouter } from "react-router-dom";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/regestration",
+    path: "/register",
     element: <Regestration />,
   },
   {
@@ -48,15 +49,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Dashboard />,
+        element: (
+          // <PrivateRouter>
+          <Dashboard />
+          // </PrivateRouter>
+        ),
       },
       {
         path: "supplies",
-        element: <Supplies />,
+        element: (
+          // <PrivateRouter>
+          <Supplies />
+          // </PrivateRouter>
+        ),
       },
       {
         path: "create-supply",
-        element: <CreatePost />,
+        element: (
+          // <PrivateRouter>
+          <CreatePost />
+          // </PrivateRouter>
+        ),
       },
     ],
   },
