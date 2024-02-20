@@ -1,11 +1,14 @@
 import Container from "@/components/shared/Container";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { Button } from "@/components/ui/button";
-import { TPosts } from "@/types";
-import { Link, useLoaderData } from "react-router-dom";
+import { useGetSinglePostQuery } from "@/redux/feathers/posts/postApi";
+import { Link, useParams } from "react-router-dom";
 
 const ViewDetails = () => {
-  const data: TPosts = useLoaderData();
+  // const data: TPosts = useLoaderData();
+
+  const { id } = useParams();
+  const { data } = useGetSinglePostQuery(id);
 
   return (
     <Container className="my-16">

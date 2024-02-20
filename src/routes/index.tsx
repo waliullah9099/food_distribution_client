@@ -29,8 +29,6 @@ const router = createBrowserRouter([
       {
         path: `/view-details/:id`,
         element: <ViewDetails />,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/posts/${params.id}`),
       },
     ],
   },

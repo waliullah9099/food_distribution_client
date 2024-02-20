@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { NavLink } from "react-router-dom";
+import { TPosts } from "@/types";
+import { Link } from "react-router-dom";
 
-const PostCard = ({ item }) => {
+const PostCard = ({ item }: TPosts) => {
   return (
     <div
       className="shadow-md border group rounded-md flex flex-col justify-center items-start space-y-4 p-4"
@@ -23,7 +24,7 @@ const PostCard = ({ item }) => {
       </div>
 
       <Button className="w-full">
-        <NavLink to={`/view-details/${item._id}`}>View Detail</NavLink>
+        <Link to={`/view-details/${item._id}`}>View Detail</Link>
       </Button>
     </div>
   );
