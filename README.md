@@ -5,7 +5,7 @@
 Clone the project.
 
 ```bash
-    git clone https://github.com/Porgramming-Hero-web-course/l2-b2-assignment-6-fronten-waliullah9099
+    git clone https://github.com/waliullah9099/food_distribution_client
 ```
 
 Go to project directory
