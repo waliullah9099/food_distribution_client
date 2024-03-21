@@ -1,21 +1,38 @@
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { LayoutDashboardIcon, ServerIcon } from "lucide-react";
+import {
+  Home,
+  LayoutDashboardIcon,
+  LucideLoader,
+  ServerIcon,
+} from "lucide-react";
 
 const Sidebar = () => {
   return (
     <aside className="bg-light-gray h-screen shadow-md p-5 sticky top-0 left-0">
       <nav className="flex flex-col gap-2">
         <NavLink
-          to="/dashboard"
+          to="/"
           className={() =>
             cn(
-              "flex gap-2 bg-gray-400 p-3 rounded-sm hover:bg-secondary hover:text-white transition-all"
+              "flex gap-2 bg-gray-400 p-3 rounded-sm hover:bg-secondary items-center hover:text-white transition-all"
             )
           }
         >
-          <LayoutDashboardIcon />
-          <span className="font-semibold">Dashboard</span>
+          <Home className="w-5" />
+          <span className="text-lg">Home</span>
+        </NavLink>
+
+        <NavLink
+          to="/dashboard"
+          className={() =>
+            cn(
+              "flex gap-2 bg-gray-400 p-3 rounded-sm hover:bg-secondary items-center hover:text-white transition-all"
+            )
+          }
+        >
+          <LayoutDashboardIcon className="w-5" />
+          <span className="text-lg">Dashboard</span>
         </NavLink>
 
         <NavLink
@@ -26,8 +43,8 @@ const Sidebar = () => {
             )
           }
         >
-          <ServerIcon className="text-xl" />
-          <span className="font-semibold">Supply Posts</span>
+          <ServerIcon className="w-5" />
+          <span className="text-lg">Supply Posts</span>
         </NavLink>
 
         <NavLink
@@ -38,8 +55,32 @@ const Sidebar = () => {
             )
           }
         >
-          <ServerIcon className="text-xl" />
-          <span className="font-semibold">Create Supply</span>
+          <ServerIcon className=" w-5" />
+          <span className="text-lg">Create Supply</span>
+        </NavLink>
+
+        <NavLink
+          to="/dashboard/leaderboard"
+          className={() =>
+            cn(
+              "flex gap-2 bg-gray-400 p-3 rounded-sm hover:bg-secondary items-center hover:text-white transition-all"
+            )
+          }
+        >
+          <LucideLoader className="w-5" />
+          <span className="text-lg">Leaderboard</span>
+        </NavLink>
+
+        <NavLink
+          to="/dashboard/create-testimonial"
+          className={() =>
+            cn(
+              "flex gap-2 bg-gray-400 p-3 rounded-sm hover:bg-secondary items-center hover:text-white transition-all"
+            )
+          }
+        >
+          <LayoutDashboardIcon className="w-5" />
+          <span className="text-lg">A. Testimonial</span>
         </NavLink>
       </nav>
     </aside>

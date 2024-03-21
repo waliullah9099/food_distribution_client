@@ -1,6 +1,7 @@
 import { useGetAllPostQuery } from "@/redux/feathers/posts/postApi";
 import { TPosts } from "@/types";
 import { TChartLabel } from "@/types/chart.type";
+import { getQuantity } from "@/utils/getQuantity";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const COLORS = [
@@ -50,17 +51,7 @@ const renderCustomizedLabel = ({
 const Dashboard = () => {
   const posts = useGetAllPostQuery(undefined);
 
-  const chartData = posts?.data?.map((d: TPosts) => {
-    const parts = d.quantity.split(" ");
-    const quantity = parseInt(parts[0]);
-
-    const data = {
-      name: d.title,
-      quantity,
-    };
-
-    return data;
-  });
+  const chartData = getQuantity(posts);
 
   return (
     <ResponsiveContainer width="100%" height="100%">

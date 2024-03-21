@@ -3,3 +3,4 @@ export * from "./gallery.type";
 export * from "./form.type";
 export * from "./chart.type";
 export * from "./sectionTitle.type";
+export * from "./volunteer.type";

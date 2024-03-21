@@ -11,6 +11,9 @@ import AllPost from "@/pages/home/posts/AllPost";
 import ViewDetails from "@/pages/home/posts/ViewDetails";
 import { createBrowserRouter } from "react-router-dom";
 import PrivateRouter from "./PrivateRouter";
+import Leaderboard from "@/pages/dashboard/Leaderboard";
+import CreateTestmonial from "@/pages/dashboard/CreateTestmonial";
+import CreateVolunteer from "@/pages/volunteer/CreateVolunteer";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,7 @@ const router = createBrowserRouter([
         path: "/supplies",
         element: <AllPost />,
       },
+
       {
         path: `/view-details/:id`,
         element: <ViewDetails />,
@@ -33,9 +37,14 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/volunteer",
+    element: <CreateVolunteer />,
+  },
+  {
     path: "/login",
     element: <Login />,
   },
+
   {
     path: "/register",
     element: <Regestration />,
@@ -50,7 +59,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "",
+        index: true,
         element: <Dashboard />,
       },
       {
@@ -60,6 +69,14 @@ const router = createBrowserRouter([
       {
         path: "create-supply",
         element: <CreatePost />,
+      },
+      {
+        path: "leaderboard",
+        element: <Leaderboard />,
+      },
+      {
+        path: "create-testimonial",
+        element: <CreateTestmonial />,
       },
     ],
   },
