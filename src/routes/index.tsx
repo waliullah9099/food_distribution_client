@@ -51,6 +51,10 @@ const router = createBrowserRouter([
     element: <CreateVolunteer />,
   },
   {
+    path: "leaderboard",
+    element: <Leaderboard />,
+  },
+  {
     path: "/login",
     element: <Login />,
   },
@@ -80,10 +84,7 @@ const router = createBrowserRouter([
         path: "create-supply",
         element: <CreatePost />,
       },
-      {
-        path: "leaderboard",
-        element: <Leaderboard />,
-      },
+
       {
         path: "create-testimonial",
         element: <CreateTestmonial />,

@@ -60,18 +60,6 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink
-          to="/dashboard/leaderboard"
-          className={() =>
-            cn(
-              "flex gap-2 p-3 rounded-sm hover:bg-secondary items-center hover:text-white transition-all"
-            )
-          }
-        >
-          <LucideLoader className="w-5" />
-          <span className="text-lg">Leaderboard</span>
-        </NavLink>
-
-        <NavLink
           to="/dashboard/create-testimonial"
           className={() =>
             cn(
@@ -79,8 +67,8 @@ const Sidebar = () => {
             )
           }
         >
-          <LayoutDashboardIcon className="w-5" />
-          <span className="text-lg">A. Testimonial</span>
+          <LucideLoader className="w-5" />
+          <span className="text-lg">C. Testimonial</span>
         </NavLink>
       </nav>
     </aside>

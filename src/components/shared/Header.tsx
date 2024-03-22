@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const Header = () => {
   const { user, logOut }: any = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
