@@ -5,6 +5,7 @@ import Gallery from "./Gallery ";
 import About from "./About/About";
 import HanpingHand from "./halpingHand/HanpingHand";
 import Volunteer from "./Volunteer/Volunteer";
+import Testimonial from "./testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Gallery />
       <About />
       <HanpingHand />
+      <Testimonial />
       <Volunteer />
     </div>
   );

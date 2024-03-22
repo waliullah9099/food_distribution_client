@@ -11,12 +11,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { toast } from "sonner";
+import { AuthContext } from "@/Provider/AuthProvider";
 
 const CreatePost = () => {
+  const { user }: any = useContext(AuthContext);
   const [addPost, { isSuccess }] = useCreatePostMutation();
-
   const [category, setCategory] = useState("");
 
   const {
@@ -41,7 +42,11 @@ const CreatePost = () => {
         if (imageRes.success) {
           const imgURL = imageRes.data.display_url;
           const { title, description, quantity } = data;
+          const email = user?.email;
+          const displayName = user?.displayName;
           const newItem = {
+            email,
+            displayName,
             title,
             category: category,
             quantity,

@@ -12,6 +12,7 @@ const CreateTestmonial = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -36,10 +37,11 @@ const CreateTestmonial = () => {
             description,
             image: imgURL,
           };
-          console.log(newItem);
+          // console.log(newItem);
           addTestimonial(newItem);
           if (isSuccess) {
             toast.success("testmonial has been created");
+            reset();
           }
         }
       });

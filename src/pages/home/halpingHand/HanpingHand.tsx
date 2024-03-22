@@ -10,7 +10,7 @@ const HanpingHand = () => {
     offset: ["0 1", "1.4 1"],
   });
   return (
-    <motion.div className=" bg-slate-50 h-[80vh]">
+    <motion.div className="  h-[80vh]">
       <Container className="setBgImageHelpHand h-full mt-24">
         <motion.div
           style={{
@@ -20,7 +20,7 @@ const HanpingHand = () => {
           className="flex flex-col w-3/4 pt-12 mx-auto items-center justify-center gap-4 "
         >
           <p className="text-secondary text-xl">Hoope at glance</p>
-          <h1 className="text-[#191F28] text-3xl lg:text-5xl font-bold pb-2">
+          <h1 className=" text-3xl lg:text-5xl font-bold pb-2">
             Have A Helping Hand For Hope.
           </h1>
           <p>
@@ -29,7 +29,7 @@ const HanpingHand = () => {
           </p>
         </motion.div>
 
-        <div className="flex justify-around pt-10">
+        <div className="flex flex-col lg:flex-row justify-around pt-10">
           <div>
             <div className="text-5xl font-bold flex items-center">
               <h1 className="text-primary">$ </h1>

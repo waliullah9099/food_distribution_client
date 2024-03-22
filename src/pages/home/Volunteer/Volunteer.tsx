@@ -27,7 +27,7 @@ const Volunteer = () => {
         </motion.p>
         <motion.h1
           variants={child}
-          className="text-[#191F28] text-3xl lg:text-5xl font-bold pb-2"
+          className="text- text-3xl lg:text-5xl font-bold pb-2"
         >
           A Little Help Can Make <br /> A Big Change.
         </motion.h1>

@@ -8,8 +8,17 @@ const testimonialApi = baseApi.injectEndpoints({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["testimonial"],
+    }),
+    getAllTetimonial: builder.query({
+      query: () => ({
+        url: "/testimonials",
+        method: "GET",
+      }),
+      providesTags: ["testimonial"],
     }),
   }),
 });
 
-export const { useCreateTestimonialMutation } = testimonialApi;
+export const { useCreateTestimonialMutation, useGetAllTetimonialQuery } =
+  testimonialApi;

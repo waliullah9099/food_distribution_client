@@ -1,5 +1,4 @@
 import { useGetAllPostQuery } from "@/redux/feathers/posts/postApi";
-import { TPosts } from "@/types";
 import { TChartLabel } from "@/types/chart.type";
 import { getQuantity } from "@/utils/getQuantity";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
@@ -50,6 +49,7 @@ const renderCustomizedLabel = ({
 
 const Dashboard = () => {
   const posts = useGetAllPostQuery(undefined);
+  console.log(posts?.data);
 
   const chartData = getQuantity(posts);
 

@@ -14,6 +14,8 @@ import PrivateRouter from "./PrivateRouter";
 import Leaderboard from "@/pages/dashboard/Leaderboard";
 import CreateTestmonial from "@/pages/dashboard/CreateTestmonial";
 import CreateVolunteer from "@/pages/volunteer/CreateVolunteer";
+import AboutUs from "@/pages/About Us/AboutUs";
+import Gratitude from "@/pages/gratitude/Gratitude";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/supplies",
         element: <AllPost />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "/community",
+        element: <Gratitude />,
       },
 
       {

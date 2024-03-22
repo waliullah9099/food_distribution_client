@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <AuthProvider>
       <Provider store={store}>
         <RouterProvider router={router} />
-        <Toaster />
+        <Toaster position="bottom-left" />
         <ScrollBar />
       </Provider>
     </AuthProvider>

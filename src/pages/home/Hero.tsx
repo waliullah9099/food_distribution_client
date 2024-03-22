@@ -16,7 +16,7 @@ const Hero = () => {
     visible: { opacity: 1, scale: 1 },
   };
   return (
-    <motion.div className="setBgImage bg-dark-gray h-screen flex justify-center items-center mb-8">
+    <motion.div className="setBgImage h-screen flex justify-center items-center mb-8">
       <Container className="">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           <motion.div

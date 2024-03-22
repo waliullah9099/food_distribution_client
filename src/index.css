@@ -73,9 +73,9 @@
   * {
     @apply border-border;
   }
-  body {
+  /* body {
     @apply bg-background text-foreground;
-  }
+  } */
   .gallaryImage {
     @apply rounded-sm shadow-md h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125;
   }
@@ -132,4 +132,8 @@
   font-weight: 600;
   font-size: 22px;
   z-index: 9;
+}
+
+.swiper-pagination {
+  margin-bottom: -6px;
 }
